@@ -1,7 +1,7 @@
 #  cwuteify, next gen spoify rip off 
 
 ## Overview
-Goal of this project was to develop a backend api for a music streaming service. The backend has been developed using the Spring framework. This project currently consists only of the backend api. Frontend part will be developed later in the future. But for now, you can use the Insomnia collection to play with the api. You can find link to the collection lower in this document.
+Goal of this project was to develop a backend api for a music streaming service. The backend has been developed using the Spring framework. ~~This project currently consists only of the backend api. Frontend part will be developed later in the future. But for now, you can use the Insomnia collection to play with the api. You can find link to the collection lower in this document.~~ [Frontend repo](https://github.com/cwute/cwuteify-frontend) and [Deployed site](https://cuwte.dev)
 
 ## Technical Details
 
@@ -59,7 +59,6 @@ There are no database scripts. Everything is done by using JPA annotations with 
 ## Important urls for this project
 - [Api endpoint](https://api.cwute.dev)
 - [Docs](https://docs.cwute.dev)
-- [Simple web to test fetching song data](https://test.cwute.dev)
 - [Insomnia collection](https://docs.cwute.dev/Insomnia-export.yaml)
 - Databse address - 167.172.109.251:5432 (I genuinely have no clue why i connect to it trough public ip instead of localhost)
 
