@@ -28,14 +28,15 @@ public class CwuteifyApplication {
 
   @Bean
   CorsConfigurationSource corsConfigurationSource() {
-    CorsConfiguration configuration = new CorsConfiguration();
+    CorsConfiguration configuration = new CorsConfiguration();  
     configuration.setAllowedOrigins(
         Arrays.asList(
             "https://api.cwute.dev",
             "https://cwute.dev",
+            "https://dev.cwute.dev",
             "https://test.cwute.dev",
             "https://localhost:3000",
-            "https://localhost:727"));
+            "https://localhost:727", "http://localhost:5173","http://localhost:4173"));
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
     configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

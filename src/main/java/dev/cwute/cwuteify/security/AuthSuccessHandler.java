@@ -52,9 +52,12 @@ public class AuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
                 Instant.ofEpochMilli(
                     ZonedDateTime.now(ZoneId.systemDefault()).toInstant().toEpochMilli()
                         + expirationTime))
+                .withClaim("roles", userDetails.getAuthorities().toString()
+                )
             .sign(Algorithm.HMAC256(secret));
     response.addHeader("Authorization", "Bearer " + token);
     response.addHeader("Access-Control-Expose-Headers", "Authorization");
+    //response.addHeader("Access-Control-Allow-Origin", "*");
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     response.getWriter().write("{\"token\": \"" + token + "\"}");

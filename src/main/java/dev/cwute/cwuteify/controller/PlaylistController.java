@@ -45,7 +45,7 @@ public class PlaylistController {
   }
 
   @GetMapping("/{idPlaylist}/remove/{idSong}")
-  public ResponseEntity<String> removeSongFromPlaylist(
+  public ResponseEntity<String> removeSongFromPlaylist( 
       @PathVariable Long idPlaylist, @PathVariable Long idSong) {
     if (!SecurityContextHolder.getContext()
         .getAuthentication()
@@ -58,7 +58,7 @@ public class PlaylistController {
   }
 
   @GetMapping("/list")
-  public ResponseEntity<List<Playlist>> getAllPlaylists() {
+  public ResponseEntity<List<Playlist>> getAllPlaylists()  {
     return playlistService.listAllPlaylists();
   }
 
